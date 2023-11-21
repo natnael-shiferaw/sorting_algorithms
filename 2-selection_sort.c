@@ -41,7 +41,7 @@ for (m = 0; m < size - 1; m++)
 {
 Min = array + m;
 
-    for (n = m + 1; n < size; n++)
+	for (n = m + 1; n < size; n++)
 		Min = (array[n] < *Min) ? (array + n) : Min;
 
 	if ((array + m) != Min)
