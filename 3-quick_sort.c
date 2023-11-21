@@ -37,7 +37,7 @@ pivot = array + final;
 	for (up = down = initial; down < final; down++)
 	{
 
-        if (array[down] < *pivot)
+    if (array[down] < *pivot)
 		{
 			if (up < down)
 			{
@@ -71,7 +71,7 @@ pivot = array + final;
 void lomuto_sort_algo_recursion(int *array, size_t size,
 int initial, int final)
 {
-	int sub;
+int sub;
 
 	if (final - initial > 0)
 	{
