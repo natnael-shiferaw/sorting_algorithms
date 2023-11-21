@@ -63,11 +63,11 @@ void Node_Swap_Before(listint_t **list, listint_t **last, listint_t **curr);
 
 /*A function used for sorting sub array of an array*/
 void Sort_sub_array(int *sub_arr, int *buffer,
- size_t front_idx, size_t mid_idx, size_t back_idx);
+size_t front_idx, size_t mid_idx, size_t back_idx);
 
 /*A function used for merge sorting through recursion*/
 void MergeSort_recursion_algo(int *sub_arr, int *buffer,
- size_t front_idx, size_t back_idx);
+size_t front_idx, size_t back_idx);
 
 /*A function that changes binary tree to binary heap*/
 void bin_tree_to_bin_heap(int *array, size_t size, size_t base_idx, size_t rt);
@@ -80,19 +80,20 @@ unsigned int power_of_10(unsigned int pow);
 
 /*Functions used in bitonic sort*/
 void Sort_bitonic_seq(int *array, size_t size,
- size_t initial, size_t size_seq, char dir);
-void arr_to_bitonic_seq(int *array, size_t size, size_t initial, size_t size_seq, char dir);
+size_t initial, size_t size_seq, char dir);
+void arr_to_bitonic_seq(int *array, size_t size, size_t initial,
+size_t size_seq, char dir);
 
 /*Functions used in quick sort hoare algo*/
 int ord_subset_arr_hoare_parti(int *array, size_t size,
- int initial, int final);
+int initial, int final);
 void quick_sort_algo_recursion(int *array, size_t size,
- int initial, int final);
+int initial, int final);
 
 /*functions used in quick sort algo*/
 int ord_sub_arr_lomuto_parti(int *array, size_t size,
- int initial, int final);
+int initial, int final);
 void lomuto_sort_algo_recursion(int *array, size_t size,
- int initial, int final);
+int initial, int final);
 
 #endif
