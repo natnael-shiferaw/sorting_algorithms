@@ -34,27 +34,27 @@ int *pivot, up, down;
 
 pivot = array + final;
 
-	for (up = down = initial; down < final; down++)
-	{
+for (up = down = initial; down < final; down++)
+{
 
-    if (array[down] < *pivot)
+	if (array[down] < *pivot)
+	{
+		if (up < down)
 		{
-			if (up < down)
-			{
-				swap_two_elem(array + down, array + up);
-				print_array(array, size);
-			}
-			up++;
+			swap_two_elem(array + down, array + up);
+			print_array(array, size);
 		}
+		up++;
 	}
+}
 
-	if (array[up] > *pivot)
-	{
-		swap_two_elem(array + up, pivot);
-		print_array(array, size);
-	}
+if (array[up] > *pivot)
+{
+	swap_two_elem(array + up, pivot);
+	print_array(array, size);
+}
 
-	return (up);
+return (up);
 }
 
 /**
@@ -73,13 +73,13 @@ int initial, int final)
 {
 int sub;
 
-	if (final - initial > 0)
-	{
+if (final - initial > 0)
+{
 
-    sub = ord_sub_arr_lomuto_parti(array, size, initial, final);
-	lomuto_sort_algo_recursion(array, size, initial, sub - 1);
-	lomuto_sort_algo_recursion(array, size, sub + 1, final);
-	}
+sub = ord_sub_arr_lomuto_parti(array, size, initial, final);
+lomuto_sort_algo_recursion(array, size, initial, sub - 1);
+lomuto_sort_algo_recursion(array, size, sub + 1, final);
+}
 }
 
 /**
