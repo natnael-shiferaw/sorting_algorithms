@@ -30,11 +30,11 @@ void swap_two_elem(int *x, int *y)
 
 int ord_sub_arr_lomuto_parti(int *array, size_t size, int initial, int final)
 {
-	int *pivot, up, down;
+int *pivot, up, down;
 
-	pivot = array + final;
+pivot = array + final;
 
-    for (up = down = initial; down < final; down++)
+	for (up = down = initial; down < final; down++)
 	{
 
         if (array[down] < *pivot)
@@ -68,16 +68,17 @@ int ord_sub_arr_lomuto_parti(int *array, size_t size, int initial, int final)
  * Return: It returns Nothing.
  */
 
-void lomuto_sort_algo_recursion(int *array, size_t size, int initial, int final)
+void lomuto_sort_algo_recursion(int *array, size_t size,
+int initial, int final)
 {
 	int sub;
 
 	if (final - initial > 0)
 	{
 
-        sub = ord_sub_arr_lomuto_parti(array, size, initial, final);
-		lomuto_sort_algo_recursion(array, size, initial, sub - 1);
-		lomuto_sort_algo_recursion(array, size, sub + 1, final);
+    sub = ord_sub_arr_lomuto_parti(array, size, initial, final);
+	lomuto_sort_algo_recursion(array, size, initial, sub - 1);
+	lomuto_sort_algo_recursion(array, size, sub + 1, final);
 	}
 }
 
