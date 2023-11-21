@@ -26,7 +26,7 @@ void swap_two_elem(int *x, int *y)
  * Description: This particular Fucntion sorts using
  * shell sort algorithm and it uses the Knuth
  *  Interval Sequence.
- * 
+ *
  * Return: Nothing is returned.
  */
 
