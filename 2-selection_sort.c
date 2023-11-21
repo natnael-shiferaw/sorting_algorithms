@@ -31,15 +31,15 @@ void swap_two_elem(int *x, int *y)
 
 void selection_sort(int *array, size_t size)
 {
-	size_t m, n;
-	int *Min;
+size_t m, n;
+int *Min;
 
-	if (array == NULL || size < 2)
-		return;
+if (array == NULL || size < 2)
+	return;
 
-	for (m = 0; m < size - 1; m++)
-	{
-	Min = array + m;
+for (m = 0; m < size - 1; m++)
+{
+Min = array + m;
 
     for (n = m + 1; n < size; n++)
 		Min = (array[n] < *Min) ? (array + n) : Min;
