@@ -39,15 +39,15 @@ void selection_sort(int *array, size_t size)
 
 	for (m = 0; m < size - 1; m++)
 	{
-		Min = array + m;
+	Min = array + m;
 
-        for (n = m + 1; n < size; n++)
-			Min = (array[n] < *Min) ? (array + n) : Min;
+    for (n = m + 1; n < size; n++)
+		Min = (array[n] < *Min) ? (array + n) : Min;
 
-		if ((array + m) != Min)
-		{
-			swap_two_elem(array + m, Min);
-			print_array(array, size);
-		}
+	if ((array + m) != Min)
+	{
+		swap_two_elem(array + m, Min);
+		print_array(array, size);
+	}
 	}
 }
